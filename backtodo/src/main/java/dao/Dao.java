@@ -37,7 +37,16 @@ public class Dao {
 		return cnx;
 	}
 	
-	public static String statusConexao() {
+	public static String getStatusConexao() {
 		return status;
+	}
+	
+	public static boolean setFecharConexao() {
+		try {
+			Dao.getConexao().close();
+			return true;
+		} catch (SQLException e) {
+			return false;
+		}
 	}
 }
