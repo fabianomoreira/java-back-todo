@@ -17,17 +17,17 @@ public class App {
 		
 		lista.forEach(tarefa -> System.out.println(tarefa.getDescricao()));
 		
-		Tarefa tarefa = new Tarefa();
-		tarefa.setDescricao("Estudar para prova");
-		tarefa.setStatus(false);
-		
-		if(dao.incluir(tarefa)) {
-			System.out.println("Tarefa incluida com sucesso");
-		} else {
-			System.out.println("Não foi possível incluir");
+		if(lista.isEmpty()) {
+			Tarefa tarefa = new Tarefa();
+			tarefa.setDescricao("Estudar para prova");
+			tarefa.setStatus(false);
+			
+			if(dao.incluir(tarefa)) {
+				System.out.println("Tarefa incluida com sucesso");
+			} else {
+				System.out.println("Não foi possível incluir");
+			}
 		}
-		
-		
 	}
 
 }
