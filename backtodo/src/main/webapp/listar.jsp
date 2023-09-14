@@ -30,6 +30,6 @@
 			out.println("</TABLE>");
 		%>
 		
-		<p><a href="index.html">Votlar</a></p>
+		<p><a href="index.html">Voltar</a></p>
 	</body>
 </html>
