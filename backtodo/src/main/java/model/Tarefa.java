@@ -25,5 +25,10 @@ public class Tarefa {
 	public void setStatus(Boolean status) {
 		this.status = status;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Tarefa [id=" + id + ", descricao=" + descricao + ", status=" + status + "]";
+	}
+
 }
